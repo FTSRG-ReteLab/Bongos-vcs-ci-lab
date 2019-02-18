@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/FTSRG-ReteLab/Bongos-vcs-ci-lab.svg?branch=master)](https://travis-ci.org/FTSRG-ReteLab/Bongos-vcs-ci-lab)
+
 # Train Speed Controller
 
 This is a sample application for the verification laboratory.
