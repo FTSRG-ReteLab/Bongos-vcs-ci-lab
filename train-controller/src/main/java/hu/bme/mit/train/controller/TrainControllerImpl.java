@@ -4,9 +4,9 @@ import hu.bme.mit.train.interfaces.TrainController;
 
 public class TrainControllerImpl implements TrainController {
 
-	private int step = 0;
-	private int referenceSpeed = 0;
-	private int speedLimit = 0;
+	private double step = 0;
+	private double referenceSpeed = 0;
+	private double speedLimit = 0;
 
 	@Override
 	public void followSpeed() {
@@ -24,12 +24,12 @@ public class TrainControllerImpl implements TrainController {
 	}
 
 	@Override
-	public int getReferenceSpeed() {
+	public double getReferenceSpeed() {
 		return referenceSpeed;
 	}
 
 	@Override
-	public void setSpeedLimit(int speedLimit) {
+	public void setSpeedLimit(double speedLimit) {
 		this.speedLimit = speedLimit;
 		enforceSpeedLimit();
 		
