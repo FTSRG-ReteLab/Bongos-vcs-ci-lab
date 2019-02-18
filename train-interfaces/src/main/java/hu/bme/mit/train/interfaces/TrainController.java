@@ -4,9 +4,9 @@ public interface TrainController {
 
 	void followSpeed();
 
-	int getReferenceSpeed();
+	double getReferenceSpeed();
 
-	void setSpeedLimit(int speedLimit);
+	void setSpeedLimit(double speedLimit);
 
 	void setJoystickPosition(int joystickPosition);
 

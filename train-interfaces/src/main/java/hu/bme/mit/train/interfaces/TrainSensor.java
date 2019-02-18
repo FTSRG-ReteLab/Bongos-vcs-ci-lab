@@ -2,8 +2,8 @@ package hu.bme.mit.train.interfaces;
 
 public interface TrainSensor {
 
-	int getSpeedLimit();
+	double getSpeedLimit();
 
-	void overrideSpeedLimit(int speedLimit);
+	void overrideSpeedLimit(double speedLimit);
 
 }
