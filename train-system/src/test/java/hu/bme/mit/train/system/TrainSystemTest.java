@@ -29,20 +29,15 @@ public class TrainSystemTest {
 	public void OverridingJoystickPosition_IncreasesReferenceSpeed() {
 		sensor.overrideSpeedLimit(10);
 		Assert.assertTrue(Math.abs(controller.getReferenceSpeed()-0) == 0);
-
-		//Assert.assertEquals(0, controller.getReferenceSpeed());
 		
 		user.overrideJoystickPosition(5);
 
 		controller.followSpeed();
 		Assert.assertTrue(Math.abs(controller.getReferenceSpeed()-5) == 0);
-		//Assert.assertEquals(5, controller.getReferenceSpeed());
 		controller.followSpeed();
 		Assert.assertTrue(Math.abs(controller.getReferenceSpeed()-10) == 0);
-		//Assert.assertEquals(10, controller.getReferenceSpeed());
 		controller.followSpeed();
 		Assert.assertTrue(Math.abs(controller.getReferenceSpeed()-10) == 0);
-		//Assert.assertEquals(10, controller.getReferenceSpeed());
 	}
 
 	@Test
@@ -52,7 +47,13 @@ public class TrainSystemTest {
 		user.overrideJoystickPosition(-5);
 		controller.followSpeed();
 		Assert.assertTrue(Math.abs(controller.getReferenceSpeed()-0) == 0);
-		//Assert.assertEquals(0, controller.getReferenceSpeed());
+	}
+
+	@Test
+	public void OverrideJoystickPositionToNegative_SetReferenceSpeedToNegative() {
+		user.overrideJoystickPosition(-5);
+		controller.followSpeed();
+		Assert.assertFalse(Math.abs(controller.getReferenceSpeed()+5) == 0);
 	}
 
 	
