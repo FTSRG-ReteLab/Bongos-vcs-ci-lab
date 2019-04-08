@@ -13,7 +13,7 @@ public class TrainControllerImpl implements TrainController, Runnable {
 		followSpeed();
 		try {
 			Thread.sleep(100);
-		} catch (Exception e){
+		} catch (InterruptedException e){
 			e.printStackTrace();
 		}
 	}
