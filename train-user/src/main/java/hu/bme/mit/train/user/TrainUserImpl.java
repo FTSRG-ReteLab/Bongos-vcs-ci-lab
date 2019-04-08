@@ -9,10 +9,12 @@ public class TrainUserImpl implements TrainUser {
 	private int joystickPosition;
 	private boolean alarmState;
 
+	@Override
 	boolean getAlarmState(){
 		return alarmState;
 	}
 
+	@Override
 	void setAlarmState(boolean alarmState){
 		this.alarmState = alarmState;
 	}
